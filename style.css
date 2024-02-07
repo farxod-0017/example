@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+}
+body {
+    background-color: rgb(241, 119, 32);
+    padding-bottom: 50px;
+}
+.header {
+    padding: 20px 10px;
+    background-color: rgb(16, 164, 8);
+    margin-bottom: 20px;
+}
+.head__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+}
+
+.main_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-content: center;
+    align-items: start;
+}
+.card {
+    padding: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.763);
+    background-color: yellow;
+    width: 350px;
+    position: relative;
+}
+.card img {
+    width: 100%;
+}
+
+#heart {
+    font-size: 30px;
+    cursor: pointer;
+    animation-name: size;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    position: sticky;
+}
+.like i {
+    color: red;
+    font-size: 18px;
+    font-weight: 600;
+    
+}
+#like {
+    position: relative;
+    padding-bottom: 4px;
+    animation-name: quyi;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+@keyframes quyi {
+    0%{border-bottom: 2.5px solid red;}
+    50%{border-bottom: 2.5px solid rgba(0, 0, 0, 0.505); }
+    100%{border-bottom: 2.5px solid red;}
+}
+@keyframes size {
+    0%{font-size: 18px;}
+    10%{font-size: 19px;}
+    20%{font-size: 20px;}
+    30%{font-size: 21px;}
+    40%{font-size: 22px;}
+    50%{font-size: 23px;}
+    60%{font-size: 22px;}
+    70%{font-size: 21px;}
+    80%{font-size: 20px;}
+    90%{font-size: 19px;}
+    100%{font-size: 18px;}
+
+}
+
+.modal {
+    position: fixed;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.644);
+    transform: translateX(2000px);
+    transition: 1s;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.modal__window {
+    width: 600px;
+    height: 100vh;
+    background: linear-gradient(135deg, rgba(255, 0, 0, 0.918), rgba(255, 255, 0, 0.936), rgba(0, 128, 0, 0.927));
+    
+}
+.show_modal {
+    transform: translateX(0px);
+    z-index: 10;
+}
+#m_like {
+    height: 28px;
+    width: 70px;
+    display: flex;
+    color: white; margin-top: 20px; margin-left:29px;
+    justify-content: space-between;
+}
+#closed {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.heart {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: red;
+    font-size: 20px;
+    
+}   
